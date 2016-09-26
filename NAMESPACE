@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+importFrom("graphics", "abline", "legend")
+importFrom("stats", "fisher.test", "lm", "qchisq")
+importFrom("utils", "read.table")
