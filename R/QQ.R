@@ -143,8 +143,8 @@ qqplot <- function(P.perm, P.observed,adjust.xy = TRUE,...) {
 
   #default parameters
   def_args <- list(pch=16, xlim=xlim, ylim=ylim,
-                   xlab = expression("Expected " ~ chi^2),
-                   ylab = expression("Observed " ~ chi^2),...)
+                   xlab=expression(Expected~~-log[10](italic(p))),
+                   ylab=expression(Observed~~-log[10](italic(p))),...)
 
   ## Next, get a list of ... arguments
   dotargs <- list(...)

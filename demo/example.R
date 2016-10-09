@@ -4,7 +4,7 @@ library(QQperm)
 data(example.data)
 
 #set number of permutations to generate NULL distribution of P-values
-n.permutations <- 1000 #too low for real analysis, default value is 1000.
+n.permutations <- 100 #too low for real analysis, default value is 1000.
 
 #caclualte expected and observed distributions of P-values using igm data
 Ps <- igm.get.pvalues(example.data$data,example.data$is.case,n.permutations)

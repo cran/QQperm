@@ -78,6 +78,7 @@ igm.get.pvalues <-function(matrix, is.case, n.permutations = 1000) {
     P.Values[,i] <- sort(Fisher.precompute[cbind(Labels.1.1+1,Labels.0.1+1)])
   }
   P.perm <- rowMeans(P.Values)
+  #P.perm <- sapply(P.Values, function(x) quantile(x,c(0.025, 0.50, 0.975)))
 
 
   #compute observed (true case control configration) p-values
@@ -88,6 +89,9 @@ igm.get.pvalues <-function(matrix, is.case, n.permutations = 1000) {
 
   out <- list()
   out$perm <- P.perm
+  #out$perm <- P.perm[,2]
+  #out$perm.LCI <- P.perm[,1]
+  #out$perm.UCI <- P.perm[,3]
   out$observed <- P.observed
   out
 }
